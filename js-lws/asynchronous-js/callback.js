@@ -32,3 +32,15 @@ function myCalculator(num1, num2) {
   myDisplay(sum);
 }
 myCalculator(2, 5);
+
+// CallBack Method to control sequence
+function myDisplayer(some) {
+  document.getElementById("demo").innerHTML = some;
+}
+
+function myCalc(num1, num2, myCallback) {
+  let sum = num1 + num2;
+  myCallback(sum);
+}
+
+myCalc(5, 5, myDisplayer);
